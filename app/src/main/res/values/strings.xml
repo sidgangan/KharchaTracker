@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">KharchaTracker</string>
+    <string name="app_name">ExpenseTracker</string>
+    <string name="title_summary">Summary</string>
+    <string name="title_expenses">Expenses</string>
+    <string name="title_add">Add</string>
+
+
 </resources>
