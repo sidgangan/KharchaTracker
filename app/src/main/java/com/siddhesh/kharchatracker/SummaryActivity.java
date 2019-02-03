@@ -1,6 +1,5 @@
 package com.siddhesh.kharchatracker;
 
-import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
@@ -9,10 +8,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.siddhesh.kharchatracker.Add.AddFragment;
+import com.siddhesh.kharchatracker.Expenses.ExpensesFragment;
+import com.siddhesh.kharchatracker.Summary.SummaryFragment;
+
 
 public class SummaryActivity extends AppCompatActivity {
 
-    private Drawable icon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +57,6 @@ public class SummaryActivity extends AppCompatActivity {
     private void loadFragment(Fragment fragment){
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.frame_container, fragment);
-        transaction.addToBackStack(null);
         transaction.commit();
     }
 }
