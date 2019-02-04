@@ -33,6 +33,7 @@ public class AddFragment extends Fragment implements DatePickerDialog.OnDateSetL
     private int year, day;
     private String month;
     private Button add;
+
     public AddFragment() {
         // Required empty public constructor
     }
@@ -101,7 +102,5 @@ public class AddFragment extends Fragment implements DatePickerDialog.OnDateSetL
         String monthName = new DateFormatSymbols().getMonths()[month];
         dateView.setText(new StringBuilder().append(day).append(" ").append(monthName).append(" ").append(year));
     }
-
-
 
 }
