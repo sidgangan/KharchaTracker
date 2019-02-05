@@ -10,23 +10,29 @@ import android.view.MenuItem;
 
 import com.siddhesh.kharchatracker.Add.AddFragment;
 import com.siddhesh.kharchatracker.Expenses.ExpensesFragment;
+import com.siddhesh.kharchatracker.SQLite.SQliteDatabaseHandler;
 import com.siddhesh.kharchatracker.Summary.SummaryFragment;
 
 
 public class SummaryActivity extends AppCompatActivity {
 
+    private SQliteDatabaseHandler db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_summary);
 
+        db = new SQliteDatabaseHandler(getApplicationContext());
+
         BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-        loadFragment(new SummaryFragment());
+        //loadFragment(new SummaryFragment());
 
     }
+
+
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -47,6 +53,7 @@ public class SummaryActivity extends AppCompatActivity {
                 case R.id.add:
                     fragment = new AddFragment();
                     loadFragment(fragment);
+
                     return true;
 
             }
@@ -58,5 +65,6 @@ public class SummaryActivity extends AppCompatActivity {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.frame_container, fragment);
         transaction.commit();
+
     }
 }

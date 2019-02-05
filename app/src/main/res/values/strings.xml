@@ -9,11 +9,11 @@
     <string name="date">Date</string>
 
     <string-array name="spinner_values">
-        <item>Food</item>
-        <item>Travel</item>
-        <item>Stationary</item>
-        <item>Other</item>
-        <item>Miscellaneous</item>
+        <item>food</item>
+        <item>travel</item>
+        <item>stationary</item>
+        <item>other</item>
+        <item>miscellaneous</item>
     </string-array>
 
 
